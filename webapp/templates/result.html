@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Congratulations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if is_birthday %}
+        <h2>Congratulations, {{ name }}!</h2>
+        <p>Today is your birthday! 🎉</p>
+        {% else %}
+        <h2>Hello, {{ name }}</h2>
+        <p>You are {{ age }} years old!</p>
+        {% endif %}
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
